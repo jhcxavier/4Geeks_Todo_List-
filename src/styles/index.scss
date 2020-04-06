@@ -1,5 +1,16 @@
 @import "~bootstrap/scss/bootstrap.scss";
-
+.todos{
+    // border:1px solid black;
+    background-color: ghostwhite;
+}
+p{
+    margin-left:2px;
+}
+.content{
+    width: 20%;
+    margin:auto;
+    border:1px solid black;
+}
 /* 
 
     You can write your own styles here...

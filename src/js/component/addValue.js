@@ -4,7 +4,10 @@ import React, { useState } from "react";
 const AddValue = () => {
 	const [value, setValue] = useState("");
 	const [item, setItem] = useState([]);
-
+	const style = {
+		color: "red",
+		textAlign: "left"
+	};
 	const addTodo = e => {
 		if (value) {
 			setItem(item.concat(value));
@@ -14,7 +17,7 @@ const AddValue = () => {
 	};
 	console.log(item);
 	return (
-		<div>
+		<div className="content">
 			<form onSubmit={addTodo}>
 				<input
 					type="text"
@@ -25,9 +28,11 @@ const AddValue = () => {
 				/>
 				<button type="submit">ADD</button>
 			</form>
-			<div>
+			<div className="todos">
 				{item.map((e, index) => (
-					<p key={index}>{e}</p>
+					<div key={index} style={style}>
+						<p>{e}</p>
+					</div>
 				))}
 			</div>
 		</div>
